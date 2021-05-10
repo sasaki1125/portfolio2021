@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/926fe18a63.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $(".headC").click(function(){
+        $(".headB").slideToggle();
+      });
+    });
+  </script>
+  <title>portfolio</title>
+</head>
+<body>
+  <header>
+    <div class="up"></div>
+    <div class="down"></div>
+    <div class="line"></div>
+    <div class="mask" id="mask"></div>
+    <script>
+      $(".line").animate({"width":"100%"},1500,function(){
+        // $(".line").css("right":"0")
+        $(".line").animate({"width":"0%"},function(){
+          $(".up").animate({"height":"0%"});
+          $(".down").animate({"height":"0%"},500,function(){
+            $("h1").fadeIn("slow");
+            $("p").fadeIn("slow")
+          });
+        });
+      })
+    </script>
+    <div class="container">
+    <a href="/" class="headA">Portfolio<span class="dot">.</span><span class="name">ABOUT</span></a>
+    <nav class="NavMenu">
+      <ul>
+        <li><a href="/">TOP</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="skill.html">SKILL</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="Toggle">
+      <span class="toggle-span"></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+  <section class="contactCona">
+    <div class="container-video">
+      <div class="aboutMain">
+        <div class="textAnimation">My name is yusuke sasaki</div>
+      </div>
+      <video id="video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+        <source src="images/6.mp4" type="video/mp4">
+    </div>
+  </section>
+  <section class="aboutConb">
+    <div class="container">
+      <div class="aboutMain">
+        <div class="aboutTitle">
+          <h2>ABOUT</h2>
+          <div class="fa fa-user fa-lg fa-fw" aria-hidden="true"></div>
+        </div>
+        <div class="subMain">
+          <div class="subTitle">
+            <h3><span class="dot">N</span>ame</h3>
+            <p>佐々木 雄亮</p>
+          </div>
+          <div class="subTitle">
+            <h3><span class="dot">B</span>irthday</h3>
+            <p>1987/11/25</p>
+          </div>
+          <div class="subTitle">
+            <h3><span class="dot">G</span>ithub</h3>
+            <p>sasaki1125</p>
+          </div>
+          <div class="subComment">
+            私はこれまで、飲食店でコンサルト業務を行ってきました。業務の際に媒体を触れることが多く<br/>
+            SEO対策をする際、HTMLが関係していること知り興味を持ったことがきっかけです。ECサイトにも<br/>
+            興味があり、自分で作ってみたいと思いプログラミングスクールへ通いRubyをメインに学習いたしました。<br/>
+            現在はフロントエンジニアに興味がありHTMLやJavaScriptの学習をしています。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js" defer></script>
+</body>
+</html>
